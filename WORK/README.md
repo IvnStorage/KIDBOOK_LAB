@@ -22,3 +22,33 @@
 Участник 4 — генерация статей  
 Участник 5 — структура репозитория  
 Участник 6 — разработка Python-скрипта для ссылок
+
+## Онтология раздела
+
+```mermaid
+graph TD
+
+Planet["Я и планета"] --> Waste["Мусор и отходы"]
+Planet --> Consumption["Осознанное потребление"]
+Planet --> Nature["Животные и природа"]
+Planet --> Climate["Климат и будущее"]
+Planet --> Action["Что я могу сделать"]
+
+Waste --> PlasticWaste["Пластиковые отходы"]
+Waste --> WasteSorting["Сортировка мусора"]
+Waste --> Recycling["Переработка отходов"]
+
+Consumption --> FastFashion["Быстрая мода"]
+Consumption --> SecondHand["Секонд-хенд"]
+Consumption --> Repair["Ремонт вещей"]
+
+Nature --> RedBook["Красная книга"]
+Nature --> Endangered["Исчезающие виды"]
+
+Climate --> GlobalWarming["Глобальное потепление"]
+Climate --> Disasters["Природные катастрофы"]
+
+Action --> EcoHabits["Эко-привычки"]
+Action --> EcoPlan["Личный экоплан"]
+```
+
