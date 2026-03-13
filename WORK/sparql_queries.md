@@ -1,12 +1,33 @@
-# Анализ WikiData
+# Анализ Wikidata
 
-Для поиска информации по теме экологии использовались SPARQL-запросы к базе знаний Wikidata.
+Для анализа предметной области экологии был выполнен SPARQL-запрос к базе знаний Wikidata.
 
-## Пример запроса
+## Запрос
 
 ```sparql
 SELECT ?item ?itemLabel
 WHERE {
-  VALUES ?item { wd:Q3196 wd:Q1323632 wd:Q11435 wd:Q587582 }
-  SERVICE wikibase:label { bd:serviceParam wikibase:language "ru,en". }
+  VALUES ?item {
+    wd:Q125928
+    wd:Q132580
+    wd:Q7202090
+    wd:Q11394
+  }
+
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "ru,en".
+  }
 }
+```
+
+## Полученные данные
+
+| item | itemLabel |
+|---|---|
+| wd:Q125928 | глобальное потепление |
+| wd:Q132580 | переработка отходов |
+| wd:Q7202090 | пластиковое загрязнение |
+| wd:Q11394 | вымирающие виды |
+
+Результаты запроса были выгружены в файл  
+`wikidata_ecology_sample.csv`.
